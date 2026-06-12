@@ -39,7 +39,7 @@ const loadDB = () => {
 };
 
 const connectDB = async () => {
-  const dbUri = process.env.MONGODB_URI || 'mongodb://localhost:27017/linkpulse';
+  const dbUri = process.env.MONGODB_URI || 'mongodb://localhost:27017/zylink';
   try {
     const conn = await mongoose.connect(dbUri, {
       serverSelectionTimeoutMS: 2000

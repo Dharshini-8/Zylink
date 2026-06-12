@@ -1,6 +1,6 @@
-# LinkPulse – Smart URL Analytics Platform
+# zylink – Smart URL Analytics Platform
 
-LinkPulse is a modern, high-performance, full-stack SaaS application that allows users to convert long, complex URLs into short, shareable links. In addition, it tracks real-time visitor engagement (browser, OS, device type, location, and traffic referrers) and supports features like QR Code downloads, custom alias branding, link expiration dates, and bulk URL shortening via CSV uploads.
+zylink is a modern, high-performance, full-stack SaaS application that allows users to convert long, complex URLs into short, shareable links. In addition, it tracks real-time visitor engagement (browser, OS, device type, location, and traffic referrers) and supports features like QR Code downloads, custom alias branding, link expiration dates, and bulk URL shortening via CSV uploads.
 
 ---
 
@@ -36,7 +36,7 @@ graph TD
 ## 📂 Folder Structure
 
 ```
-linkpulse/
+zylink/
 ├── backend/
 │   ├── src/
 │   │   ├── config/
@@ -110,8 +110,8 @@ linkpulse/
 3. A `.env` file has been pre-configured. You can modify it if your environment changes:
    ```env
    PORT=5000
-   MONGODB_URI=mongodb://localhost:27017/linkpulse
-   JWT_SECRET=supersecurelinkpulsesecretkey123!
+   MONGODB_URI=mongodb://localhost:27017/zylink
+   JWT_SECRET=supersecurezylinksecretkey123!
    FRONTEND_URL=http://localhost:5173
    NODE_ENV=development
    ```

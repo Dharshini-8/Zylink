@@ -13,7 +13,7 @@ const protect = async (req, res, next) => {
   }
 
   try {
-    const decoded = jwt.verify(token, process.env.JWT_SECRET || 'supersecurelinkpulsesecretkey123!');
+    const decoded = jwt.verify(token, process.env.JWT_SECRET || 'supersecurezylinksecretkey123!');
     req.user = await User.findById(decoded.id).select('-password');
     if (!req.user) {
       return res.status(401).json({ success: false, message: 'User not found' });

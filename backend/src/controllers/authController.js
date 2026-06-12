@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken');
 const RESERVED_USERNAMES = ['api', 'auth', 'static', 'dashboard', 'admin', 'login', 'register', 'logout', 'analytics', 'links'];
 
 const generateToken = (id) => {
-  return jwt.sign({ id }, process.env.JWT_SECRET || 'supersecurelinkpulsesecretkey123!', {
+  return jwt.sign({ id }, process.env.JWT_SECRET || 'supersecurezylinksecretkey123!', {
     expiresIn: '30d'
   });
 };
