@@ -16,19 +16,19 @@ LinkPulse is a modern, high-performance, full-stack SaaS application that allows
 
 ```mermaid
 graph TD
-    User([User Browser])
+    User[User Browser]
     Vite[Vite React Frontend]
-    Express[Express.js Node Server]
+    Express[Express Node Server]
     Mongo[(MongoDB Database)]
     
     User -->|Interacts| Vite
-    Vite -->|API Requests + JWT Header| Express
-    Express -->|CRUD Operations| Mongo
+    Vite -->|API Requests| Express
+    Express -->|CRUD| Mongo
     
-    Visitor([Short Link Visitor])
-    Visitor -->|GET /:username/:code| Express
-    Express -->|Log Analytics Async| Mongo
-    Express -->|302 Redirect| Dest([Target Destination URL])
+    Visitor[Link Visitor]
+    Visitor -->|GET Redirect| Express
+    Express -->|Analytics| Mongo
+    Express -->|302 Redirect| Dest[Destination URL]
 ```
 
 ---
