@@ -238,4 +238,4 @@ For issues, questions, or suggestions, please open an [Issue](https://github.com
 
 ---
 
-**Made with ❤️ by Dharshini**
+For queries contact : vtdharshini8@gmail.com
