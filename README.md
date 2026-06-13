@@ -64,7 +64,8 @@ zylink/
 │   │   │   ├── helpers.js             # General URL & code utilities
 │   │   │   └── qrCodeGenerator.js     # QR Code base64 png generator
 │   │   └── app.js                     # Server entry point
-│   ├── .env                           # Local environment configuration
+│   ├── .env                           # Local environment configuration (⚠️ DO NOT COMMIT - see .env.example)
+│   ├── .env.example                   # Environment variables template
 │   └── package.json                   # Server dependencies
 └── frontend/
     ├── index.html                     # HTML root template with SEO metadata
@@ -97,6 +98,35 @@ zylink/
 
 ---
 
+## 🔐 Security & Environment Setup
+
+### ⚠️ Critical: Protecting Sensitive Data
+
+**Environment variables contain sensitive information** (database credentials, API keys, secrets). **NEVER commit `.env` files to version control.**
+
+#### Ensure `.gitignore` Contains:
+```
+backend/.env
+node_modules/
+dist/
+.DS_Store
+*.log
+```
+
+Check if `.gitignore` exists:
+```bash
+cat .gitignore
+```
+
+If it doesn't exist or needs updating:
+```bash
+echo "backend/.env" >> .gitignore
+echo "node_modules/" >> .gitignore
+echo "dist/" >> .gitignore
+```
+
+---
+
 ## 🛠️ Setup Guide
 
 ### Prerequisites
@@ -109,15 +139,19 @@ zylink/
    ```bash
    npm install
    ```
-3. A `.env` file has been pre-configured. You can modify it if your environment changes:
+3. Create `.env` file from the template:
+   ```bash
+   cp .env.example .env
+   ```
+4. Edit `.env` with your actual values:
    ```env
    PORT=5000
-   MONGODB_URI=mongodb://localhost:27017/zylink
-   JWT_SECRET=supersecurezylinksecretkey123!
+   MONGODB_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/zylink
+   JWT_SECRET=your_super_secret_jwt_key_here
    FRONTEND_URL=http://localhost:5173
    NODE_ENV=development
    ```
-4. Start the backend server in development mode:
+5. Start the backend server in development mode:
    ```bash
    npm run dev
    ```
@@ -182,6 +216,26 @@ zylink/
    - Deploy the Express backend on standard Node.js hosting servers (e.g. Render, Railway, Heroku, AWS EC2, or DigitalOcean).
 4. **Environment Mapping:**
    - Point the frontend `API_BASE` configurations and the backend `FRONTEND_URL` environment variables to the production domains.
+   - **For production deployment:** Use strong, unique values for `JWT_SECRET` and secure MongoDB credentials. Never use development values in production.
 
 ---
 
+## 📝 Features
+
+✨ **URL Shortening** - Convert long URLs into short, memorable links  
+📊 **Real-time Analytics** - Track visitor info (location, device, browser, referrer)  
+🎯 **Custom Aliases** - Personalize your shortened links  
+⏰ **Expiration Dates** - Set automatic link expiration  
+🎨 **QR Code Generation** - Download QR codes for your links  
+📤 **Bulk Upload** - Shorten multiple URLs via CSV  
+🔒 **User Authentication** - Secure login with JWT  
+
+---
+
+## 📞 Support & Contact
+
+For issues, questions, or suggestions, please open an [Issue](https://github.com/Dharshini-8/Zylink/issues) on GitHub.
+
+---
+
+**Made with ❤️ by Dharshini**
