@@ -1,6 +1,6 @@
-# zylink – Smart URL Analytics Platform
+# Zylink – Smart URL Analytics Platform
 
-zylink is a modern, high-performance, full-stack SaaS application that allows users to convert long, complex URLs into short, shareable links. In addition, it tracks real-time visitor engagement (browser, OS, device type, location, and traffic referrers) and supports features like QR Code downloads, custom alias branding, link expiration dates, and bulk URL shortening via CSV uploads.
+Zylink is a modern, high-performance, full-stack SaaS application that allows users to convert long, complex URLs into short, shareable links. In addition, it tracks real-time visitor engagement (browser, OS, device type, location, and traffic referrers) and supports features like QR Code downloads, custom alias branding, link expiration dates, and bulk URL shortening via CSV uploads.
 
 ---
 
