@@ -4,15 +4,13 @@
 
 Zylink is a modern, high-performance, full-stack SaaS application that allows users to convert long, complex URLs into short, shareable links. In addition, it tracks real-time visitor engagement (browser, OS, device type, location, and traffic referrers) and supports features like QR Code downloads, custom alias branding, link expiration dates, and bulk URL shortening via CSV uploads.
 
----
-
 ## 🎨 Tech Stack
 - **Frontend:** React, Vite, Tailwind CSS, Recharts (visual charts), Framer Motion (premium animations), Lucide React (vector iconography).
 - **Backend:** Node.js, Express.js (REST APIs, routing, input validations).
 - **Authentication:** JWT (JSON Web Tokens), Bcryptjs (secure password hashing), Protected route middleware.
 - **Database:** MongoDB, Mongoose ODM (structured schemas and analytics aggregations).
 
----
+
 
 ## 🏗️ Architecture Diagram
 
@@ -33,11 +31,11 @@ graph TD
     Express -->|302 Redirect| Dest[Destination URL]
 ```
 
----
+
 
 ## 📂 Folder Structure
 
-```
+
 zylink/
 ├── backend/
 │   ├── src/
@@ -96,7 +94,7 @@ zylink/
     └── package.json                   # Frontend dependencies
 ```
 
----
+
 
 ## 🔐 Security & Environment Setup
 
@@ -125,7 +123,7 @@ echo "node_modules/" >> .gitignore
 echo "dist/" >> .gitignore
 ```
 
----
+
 
 ## 🛠️ Setup Guide
 
@@ -169,7 +167,6 @@ echo "dist/" >> .gitignore
    ```
    The application will be running at `http://localhost:5173`. Open it in your web browser.
 
----
 
 ## 🚀 API Documentation
 
@@ -197,7 +194,7 @@ echo "dist/" >> .gitignore
 ### 🔀 Redirection Route
 - **`GET /:username/:code`** - (Public) Checks link activity and expirations, tracks browser/device/location/referrer, updates counters, and redirects with a 302 code.
 
----
+
 
 ## 🌐 Deployment Instructions
 
@@ -218,7 +215,7 @@ echo "dist/" >> .gitignore
    - Point the frontend `API_BASE` configurations and the backend `FRONTEND_URL` environment variables to the production domains.
    - **For production deployment:** Use strong, unique values for `JWT_SECRET` and secure MongoDB credentials. Never use development values in production.
 
----
+
 
 ## 📝 Features
 
@@ -230,12 +227,17 @@ echo "dist/" >> .gitignore
 📤 **Bulk Upload** - Shorten multiple URLs via CSV  
 🔒 **User Authentication** - Secure login with JWT  
 
----
+
+## 🎬 Project Demo & Explanation
+
+📹 Watch the complete walkthrough of the URL Shortener Project
+
+▶️ YouTube Demo:
+https://youtu.be/xMFWFcChjnM
+
+“This project is a part of a hackathon run by https://katomaran.com "
 
 ## 📞 Support & Contact
 
 For issues, questions, or suggestions, please open an [Issue](https://github.com/Dharshini-8/Zylink/issues) on GitHub.
-
----
-
 For queries contact : vtdharshini8@gmail.com
