@@ -35,63 +35,75 @@ graph TD
 
 ## 📂 Folder Structure
 
-
 zylink/
 ├── backend/
 │   ├── src/
 │   │   ├── config/
-│   │   │   └── db.js                 # Database connection config
+│   │   │   └── db.js
+│   │   │
 │   │   ├── controllers/
-│   │   │   ├── authController.js      # Auth business logic
-│   │   │   ├── urlController.js       # URL shortening & bulk CRUD
-│   │   │   ├── analyticsController.js # Aggregations & summary data
-│   │   │   └── redirectController.js  # Server redirection and tracking
+│   │   │   ├── authController.js
+│   │   │   ├── urlController.js
+│   │   │   ├── analyticsController.js
+│   │   │   └── redirectController.js
+│   │   │
 │   │   ├── middlewares/
-│   │   │   ├── authMiddleware.js      # JWT protect verification
-│   │   │   └── errorMiddleware.js     # Express general error handler
+│   │   │   ├── authMiddleware.js
+│   │   │   └── errorMiddleware.js
+│   │   │
 │   │   ├── models/
-│   │   │   ├── User.js                # User collection schema
-│   │   │   ├── Url.js                 # URL collection schema
-│   │   │   └── Analytics.js           # Visitor analytics logs schema
+│   │   │   ├── User.js
+│   │   │   ├── Url.js
+│   │   │   └── Analytics.js
+│   │   │
 │   │   ├── routes/
-│   │   │   ├── authRoutes.js          # Authentication routing endpoints
-│   │   │   ├── urlRoutes.js           # URL configuration routing endpoints
-│   │   │   ├── analyticsRoutes.js     # Metrics routing endpoints
-│   │   │   └── redirectRoutes.js      # Redirection endpoints (root level)
+│   │   │   ├── authRoutes.js
+│   │   │   ├── urlRoutes.js
+│   │   │   ├── analyticsRoutes.js
+│   │   │   └── redirectRoutes.js
+│   │   │
 │   │   ├── utils/
-│   │   │   ├── helpers.js             # General URL & code utilities
-│   │   │   └── qrCodeGenerator.js     # QR Code base64 png generator
-│   │   └── app.js                     # Server entry point
-│   ├── .env                           # Local environment configuration (⚠️ DO NOT COMMIT - see .env.example)
-│   ├── .env.example                   # Environment variables template
-│   └── package.json                   # Server dependencies
+│   │   │   ├── helpers.js
+│   │   │   └── qrCodeGenerator.js
+│   │   │
+│   │   └── app.js
+│   │
+│   ├── .env
+│   ├── .env.example
+│   └── package.json
+│
 └── frontend/
-    ├── index.html                     # HTML root template with SEO metadata
-    ├── tailwind.config.js             # Theme & styling configurations
+    ├── index.html
+    ├── tailwind.config.js
     ├── postcss.config.js
+    │
     ├── src/
-    │   ├── App.jsx                    # Routing & Context Providers
-    │   ├── index.css                  # Typography, utilities & dark themes
-    │   ├── main.jsx                   # React bootstrapper
+    │   ├── App.jsx
+    │   ├── index.css
+    │   ├── main.jsx
+    │   │
     │   ├── components/
     │   │   └── ui/
-    │   │       ├── Button.jsx         # Custom premium buttons
-    │   │       ├── Card.jsx           # Clean container panels
-    │   │       ├── Dialog.jsx         # Animated overlay modals
-    │   │       ├── Input.jsx          # Custom styled text inputs
-    │   │       └── Toast.jsx          # Framer-motion floating alert toasts
+    │   │       ├── Button.jsx
+    │   │       ├── Card.jsx
+    │   │       ├── Dialog.jsx
+    │   │       ├── Input.jsx
+    │   │       └── Toast.jsx
+    │   │
     │   ├── context/
-    │   │   ├── AuthContext.jsx        # Login, logout & api request contexts
-    │   │   └── ThemeContext.jsx       # Theme state toggles
+    │   │   ├── AuthContext.jsx
+    │   │   └── ThemeContext.jsx
+    │   │
     │   └── pages/
-    │       ├── LandingPage.jsx        # Product landing & widget demo
-    │       ├── Login.jsx              # Auth screens
-    │       ├── Register.jsx           # Signup validation
-    │       ├── Dashboard.jsx          # Link tables & bulk options
-    │       ├── AnalyticsDetail.jsx    # Analytics charts & logs
-    │       ├── PublicAnalytics.jsx    # Client-facing metrics view
-    │       └── NotFound.jsx           # 404 handler
-    └── package.json                   # Frontend dependencies
+    │       ├── LandingPage.jsx
+    │       ├── Login.jsx
+    │       ├── Register.jsx
+    │       ├── Dashboard.jsx
+    │       ├── AnalyticsDetail.jsx
+    │       ├── PublicAnalytics.jsx
+    │       └── NotFound.jsx
+    │
+    └── package.json
 ```
 
 
